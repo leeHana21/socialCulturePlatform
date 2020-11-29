@@ -3,23 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".menu1_home"
     android:orientation="vertical"
-    android:padding="10dp">
-
+    android:padding="10dp"
+    android:layout_marginBottom="?attr/actionBarSize"   >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="현재 구역 : 선화동"
-        android:textSize="15dp" />
+        android:textSize="15dp"/>
 
-    <ImageView
-        android:id="@+id/banner"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@mipmap/banner_main"
-        android:layout_margin="10dp"/>
+        android:layout_height="200dp"/>
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        app:ci_drawable="@drawable/circle"
+        app:ci_height="7dp"
+        app:ci_margin="4dp"
+        app:ci_width="7dp"
+        />
 
+<!--        android:src="@mipmap/banner_main"-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,15 +64,15 @@
                     android:textStyle="bold" />
 
                 <ListView
+                    android:id="@+id/listV1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
                     />
 
             </LinearLayout>
-
-
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,6 +103,7 @@
                     android:textSize="20dp"
                     android:textStyle="bold" />
                 <ListView
+                    android:id="@+id/listV2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
@@ -121,6 +131,7 @@
                     android:textStyle="bold" />
 
                 <ListView
+                    android:id="@+id/listV3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
 
@@ -148,8 +159,11 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
             <ListView
+                android:id="@+id/listV4"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+
+                />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

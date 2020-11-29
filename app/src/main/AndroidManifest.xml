@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".menu5_setting"></activity>
+        <activity android:name=".gatheringWrite"></activity>
+        <activity android:name=".menu5_setting" />
         <activity android:name=".menu4_review" />
         <activity android:name=".menu3_search" />
         <activity android:name=".menu2_gathering" />

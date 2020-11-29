@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager = getSupportFragmentManager();
     // 4개의 메뉴에 들어갈 Fragment들
     private Menu1Fragment menu1Fragment = new Menu1Fragment();
-    private Menu2Fragment menu2Fragment = new Menu2Fragment();
+    //private Menu2Fragment menu2Fragment = new Menu2Fragment();
     private Menu3Fragment menu3Fragment = new Menu3Fragment();
     private Menu4Fragment menu4Fragment = new Menu4Fragment();
     private Menu5Fragment menu5Fragment = new Menu5Fragment();
@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 switch (item.getItemId()) {
                     case R.id.home: {
-                        manager.beginTransaction().replace(R.id.frame_layout,menu1Fragment).commit();
+                        manager.beginTransaction().replace(R.id.frame_layout, new menu1_home()).commit();
                         break;
                     }
                     case R.id.gathering: {
-                        manager.beginTransaction().replace(R.id.frame_layout, menu2Fragment).commit();
+                        manager.beginTransaction().replace(R.id.frame_layout, new menu2_gathering()).commit();
                         //transaction.replace(R.id.frame_layout, menu2Fragment).commitAllowingStateLoss();
                         break;
                     }
