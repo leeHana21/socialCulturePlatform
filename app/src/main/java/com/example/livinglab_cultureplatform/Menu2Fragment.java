@@ -32,6 +32,7 @@ public class Menu2Fragment extends Fragment implements View.OnClickListener{
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_menu2_gathering, container, false);
         FirebaseApp.initializeApp(getActivity());
+        writeGathering = view.findViewById(R.id.writeGathering);
         Button daily = view.findViewById(R.id.daily);
         Button leisure = view.findViewById(R.id.leisure);
         Button travel = view.findViewById(R.id.travel);

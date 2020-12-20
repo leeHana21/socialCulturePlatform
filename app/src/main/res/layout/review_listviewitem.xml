@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:gravity="center"
         android:padding="7dp"
         android:layout_margin="10dp"
-        android:background="#CCC9C9"
+        android:background="@drawable/border_empty_blue"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:background="#009688"
+            android:src="@mipmap/review"
             android:layout_width="80dp"
             android:layout_height="80dp" >
         </ImageView>
@@ -25,10 +22,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <ImageView
-                    android:background="#f11"
+                    android:src="@mipmap/place"
                     android:layout_width="17dp"
                     android:layout_height="17dp" />
                 <TextView
+                    android:id="@+id/rePlace"
                     android:layout_marginLeft="5dp"
                     android:text="대전시 대덕구 봉구비어"
                     android:layout_width="wrap_content"
@@ -39,6 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
                 <TextView
+                    android:id="@+id/reTitle"
                     android:text="간맥이었으나 과하게 마신 후기"
                     android:textSize="18dp"
                     android:layout_width="wrap_content"
@@ -53,10 +52,11 @@
                     android:layout_height="wrap_content" >
                     <ImageView
                         android:layout_marginRight="5dp"
-                        android:background="#f11"
+                        android:src="@mipmap/people"
                         android:layout_width="17dp"
                         android:layout_height="17dp" />
                     <TextView
+                        android:id="@+id/rePNum"
                         android:text="5명"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -67,10 +67,11 @@
                     android:layout_height="wrap_content" >
                     <ImageView
                         android:layout_marginRight="5dp"
-                        android:background="#f11"
+                        android:src="@mipmap/date"
                         android:layout_width="17dp"
                         android:layout_height="17dp" />
                     <TextView
+                        android:id="@+id/reDate"
                         android:text="2020-11-09"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -78,4 +79,3 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>

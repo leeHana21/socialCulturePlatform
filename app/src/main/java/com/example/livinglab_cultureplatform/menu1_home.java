@@ -117,13 +117,83 @@ public class menu1_home extends Fragment {
                     //String title = data.child(ObjToString(key)).child("title").getValue(String.class);
                     String title = data.child("title").getValue(String.class);
                     data1.add(title);
-                    data2.add(title);
-                    data3.add(title);
-                    data4.add(title);
                 }
                 adapter1.notifyDataSetChanged();
-                adapter2.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mReference.child("review").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //String TAG = "파이어베이스 데이터";
+                for(DataSnapshot data : snapshot.getChildren()) {
+                    //String title = data.getValue(String.class);
+                    //String uid = data.getKey().toString();
+
+                    //Object key = data.getValue();
+
+                    //keydata.add(key);
+                    //Log.d("menu1_home", "receive data" + test);
+
+                    //String title = data.child(ObjToString(key)).child("title").getValue(String.class);
+                    String title = data.child("title").getValue(String.class);
+                    data3.add(title);
+                }
                 adapter3.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mReference.child("local").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //String TAG = "파이어베이스 데이터";
+                for(DataSnapshot data : snapshot.getChildren()) {
+                    //String title = data.getValue(String.class);
+                    //String uid = data.getKey().toString();
+
+                    //Object key = data.getValue();
+
+                    //keydata.add(key);
+                    //Log.d("menu1_home", "receive data" + test);
+
+                    //String title = data.child(ObjToString(key)).child("title").getValue(String.class);
+                    String title = data.getValue(String.class);
+                    data2.add(title);
+
+                }
+                adapter2.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        mReference.child("communicate").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                //String TAG = "파이어베이스 데이터";
+                for(DataSnapshot data : snapshot.getChildren()) {
+                    //String title = data.getValue(String.class);
+                    //String uid = data.getKey().toString();
+
+                    //Object key = data.getValue();
+
+                    //keydata.add(key);
+                    //Log.d("menu1_home", "receive data" + test);
+
+                    //String title = data.child(ObjToString(key)).child("title").getValue(String.class);
+                    String title = data.getValue(String.class);
+                    data4.add(title);
+                }
                 adapter4.notifyDataSetChanged();
             }
 
@@ -132,31 +202,6 @@ public class menu1_home extends Fragment {
 
             }
         });
-        /*for(int i = 0; i<keydata.size(); i++) {
-
-            mReference.child(keydata.get(i)).child("title").addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for(DataSnapshot data : snapshot.getChildren())
-                    {
-                        String Title = data.getValue().toString();
-                        data1.add(Title);
-                        data2.add(Title);
-                        data3.add(Title);
-                        data4.add(Title);
-                    }
-                    adapter1.notifyDataSetChanged();
-                    adapter2.notifyDataSetChanged();
-                    adapter3.notifyDataSetChanged();
-                    adapter4.notifyDataSetChanged();
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }*/
         return view;
     }
 

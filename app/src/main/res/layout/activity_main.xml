@@ -21,12 +21,9 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
         app:itemBackground="@color/colorPrimary"
-        app:itemIconTint="@color/colorAccent"
+        app:itemIconTint="@color/white"
         app:labelVisibilityMode="labeled"
         app:itemTextColor="@color/navTextColor"
         app:menu="@menu/livinglab_menu">
-
     </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

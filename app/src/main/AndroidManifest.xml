@@ -4,17 +4,26 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@mipmap/app_icon"
+        android:label="Neul"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".gatheringWrite"></activity>
+        <activity android:name=".review_write"></activity>
+        <activity
+            android:name=".LoadingSplash"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".gatheringWrite" />
         <activity android:name=".menu5_setting" />
         <activity android:name=".menu4_review" />
         <activity android:name=".menu3_search" />
         <activity android:name=".menu2_gathering" />
         <activity android:name=".menu1_home" />
+        <activity android:name=".my_info_edit" />
+        <activity android:name=".app_setting" />
+        <activity android:name=".app_callcenter" />
+        <activity android:name=".app_notice" />
+        <activity android:name=".my_story_edit" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

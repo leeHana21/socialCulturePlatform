@@ -40,7 +40,6 @@ public class gatheringWrite extends AppCompatActivity {
         setContentView(R.layout.activity_gathering_write);
         chooseCategory = findViewById(R.id.chooseCategory);
         chooseDate = findViewById(R.id.chooseDate);
-        choosePhoto = findViewById(R.id.choosePhoto);
         wirtePlace = findViewById(R.id.writePlace);
         writeNum = findViewById(R.id.writeNum);
         writePrice = findViewById(R.id.writePrice);
@@ -64,8 +63,6 @@ public class gatheringWrite extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDatePicker();
-                chooseDate.setTextColor(Color.BLACK);
-                chooseDate.setText(dateMessage);
             }
         });
 
@@ -89,12 +86,9 @@ public class gatheringWrite extends AppCompatActivity {
                 map.put("category",category);
                 map.put("date", dateMessage);
                 mReference.push().setValue(map);
-                isDestroyed();
-                Intent intent = new Intent(getApplicationContext(),menu2_gathering.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
-        finishActivity(0);
 
 
     }
@@ -108,7 +102,8 @@ public class gatheringWrite extends AppCompatActivity {
         String day_string = Integer.toString(day);
         String year_string = Integer.toString(year);
         dateMessage = (month_string + "/" + day_string + "/" + year_string);
-
+        chooseDate.setTextColor(Color.BLACK);
+        chooseDate.setText(dateMessage);
         Toast.makeText(this,"Date: "+dateMessage,Toast.LENGTH_SHORT).show();
     }
 }

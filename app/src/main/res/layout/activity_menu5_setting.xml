@@ -38,9 +38,11 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"/>
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_foreground"
+                android:id="@+id/profile_edit"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/pencil"
+                android:layout_gravity="center"
                 android:layout_marginLeft="5dp"/>
         </LinearLayout>
         <TextView
@@ -58,7 +60,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher_foreground"
+                android:src="@mipmap/profile"
                 android:layout_gravity="center"/>
         </LinearLayout>
     </LinearLayout>
@@ -67,14 +69,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15dp"
-        android:text="보유 포인트 : "
+        android:text="보유 포인트 : 0pt"
         android:gravity="right"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"/>
 
     <LinearLayout
-        android:id="@+id/serverInfo_extend"
+        android:id="@+id/myStory_extend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -84,7 +86,7 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/serverInfo"
+            android:id="@+id/myStory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -97,7 +99,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/dataInfo_extend"
+        android:id="@+id/notice_extend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -106,7 +108,7 @@
         android:layout_margin="5dp"
         android:background="@drawable/border_empty_blue">
         <TextView
-            android:id="@+id/dataInfo"
+            android:id="@+id/notice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="공지사항"
@@ -118,7 +120,7 @@
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/notiInfo_extend"
+        android:id="@+id/customerService_extend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -127,7 +129,7 @@
         android:layout_margin="5dp"
         android:background="@drawable/border_empty_blue">
         <TextView
-            android:id="@+id/notiInfo"
+            android:id="@+id/customerService"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="고객센터"
@@ -139,6 +141,7 @@
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/configSet_extend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -147,6 +150,7 @@
         android:layout_margin="5dp"
         android:background="@drawable/border_empty_blue">
         <TextView
+            android:id="@+id/configSet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="환경설정"

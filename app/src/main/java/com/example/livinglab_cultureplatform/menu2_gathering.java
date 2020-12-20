@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.FirebaseApp;
@@ -34,7 +35,8 @@ public class menu2_gathering extends Fragment  {
     private DatabaseReference mReference;
     private ChildEventListener mChild;
     ArrayList<gathering> items = new ArrayList<gathering>();
-    Button daily, leisure, travel, study, free, culture, writeGathering;
+    Button daily, leisure, travel, study, free, culture;
+    ImageView writeGathering;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,7 +67,8 @@ public class menu2_gathering extends Fragment  {
 
         gatheringRecyclerView = view.findViewById(R.id.gatheringRecyclerView);
         gatheringRecyclerView.setHasFixedSize(true);
-        gatheringRecyclerView.addItemDecoration(new RecyclerDecoration(5));
+        RecyclerDecoration spaceDecoration = new RecyclerDecoration(20);
+        gatheringRecyclerView.addItemDecoration(spaceDecoration);
         layoutManager = new LinearLayoutManager(getActivity());
 
         gatheringRecyclerView.setLayoutManager(layoutManager);

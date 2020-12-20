@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     // FrameLayout에 각 메뉴의 Fragment를 바꿔 줌
     private FragmentManager fragmentManager = getSupportFragmentManager();
     // 4개의 메뉴에 들어갈 Fragment들
-    private Menu1Fragment menu1Fragment = new Menu1Fragment();
+    //private Menu1Fragment menu1Fragment = new Menu1Fragment();
     //private Menu2Fragment menu2Fragment = new Menu2Fragment();
     private Menu3Fragment menu3Fragment = new Menu3Fragment();
     private Menu4Fragment menu4Fragment = new Menu4Fragment();
@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         //frag = (Menu3Fragment)manager.findFragmentById(R.id.joinState);
         //frag2 = (Menu3Fragment)manager.findFragmentById(R.id.btnlogin);
 
-//        //앱 로딩화면 띄우기
-//        Intent intent = new Intent(this, LoadingActivity.class);
-//        startActivity(intent);
+        //앱 로딩화면 띄우기
+        Intent intent = new Intent(this, LoadingSplash.class);
+        startActivity(intent);
 
         //하단 네비게이션 선언
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.review: {
-                        manager.beginTransaction().replace(R.id.frame_layout, menu4Fragment).commit();
+                        manager.beginTransaction().replace(R.id.frame_layout, new menu4_review()).commit();
                         //transaction.replace(R.id.frame_layout, menu4Fragment).commitAllowingStateLoss();
                         break;
                     }
